@@ -6,6 +6,10 @@ JDK: ms21
 <b>Bouw & Run de applicatie:</b> <br>
 Laad maven (pom.xml folder) en het project zal automatisch bouwen.<br>
 Backend: Navigeer in project folder BookTrivia -> src -> main -> java -> com.example.booktrivia -> BookTriviaApplication.
+
+Environment variabelen: Klik rechtsboven op de applicatie -> edit configurations -> Modify options -> Environment variables. <br>
+Voeg hierin het volgende: TRIVIA_API_URL="https://opentdb.com/api.php?amount=10&category=10&difficulty=easy" 
+
 Run de applicatie om het backend op te starten. Deze is dan gestart op http://localhost:8081/.
 
 Voor de unit testen navigeer in BookTrivia folder naar het test folder. Hierin is een subfolder genaamd Trivia.
