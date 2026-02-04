@@ -1,0 +1,73 @@
+<main class="page">
+  <section class="card">
+    <header class="header">
+      <div>
+        <p class="eyebrow">Book Trivia</p>
+        <h1>One Question at a Time</h1>
+        <p class="subtitle">Select an answer to see if you're right.</p>
+      </div>
+      @if (totalQuestions() > 0) {
+        <div class="score-pill">
+          <span>Score</span>
+          <strong>{{ correctCount() }}/{{ totalQuestions() }}</strong>
+        </div>
+      }
+    </header>
+
+    @if (loading()) {
+      <div class="notice">Loading questions...</div>
+    } @else if (error()) {
+      <div class="notice error">
+        <p>{{ error() }}</p>
+        <button class="ghost" type="button" (click)="restartQuiz()">Try again</button>
+      </div>
+    } @else if (totalQuestions() === 0) {
+      <div class="notice">No questions available yet.</div>
+    } @else if (isFinished()) {
+      <div class="finish">
+        <h2>No more questions left.</h2>
+        <p class="score">Final score: {{ correctCount() }}/{{ totalQuestions() }}</p>
+        <button class="primary" type="button" (click)="restartQuiz()">Play again</button>
+      </div>
+    } @else {
+      @if (currentQuestion(); as question) {
+        <div class="progress">Question {{ currentIndex() + 1 }} of {{ totalQuestions() }}</div>
+        <h2 class="question">{{ question.question }}</h2>
+        <div class="meta">
+          <span>{{ question.category }}</span>
+          <span>Difficulty: {{ question.difficulty }}</span>
+        </div>
+        <div class="answers">
+          @for (answer of question.answers; track answer) {
+            <button
+              type="button"
+              class="answer"
+              [class.selected]="selectedAnswer() === answer"
+              [class.correct]="answerResult() !== null && answer === correctAnswer()"
+              [class.wrong]="answerResult() === false && selectedAnswer() === answer"
+              [disabled]="answerResult() !== null || isAnswering()"
+              (click)="selectAnswer(answer)"
+            >
+              {{ answer }}
+            </button>
+          }
+        </div>
+        @if (answerResult() !== null) {
+          <div class="result" [class.correct]="answerResult()" [class.wrong]="answerResult()">
+            @if (selectedAnswer() == correctAnswer()) {
+              Correct!
+            } @else {
+              Wrong answer. The correct answer is:
+              <span class="correct-answer">{{ correctAnswer() || 'unknown' }}</span>
+            }
+          </div>
+          <button class="primary" type="button" (click)="nextQuestion()">
+            {{ currentIndex() + 1 === totalQuestions() ? 'Finish quiz' : 'Next question' }}
+          </button>
+        } @else {
+          <div class="hint">Choose an answer to continue.</div>
+        }
+      }
+    }
+  </section>
+</main>
