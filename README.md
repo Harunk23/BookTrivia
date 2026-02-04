@@ -5,9 +5,10 @@ JDK: ms21
 
 <b>Bouw & Run de applicatie:</b> <br>
 Laad maven (pom.xml folder) en het project zal automatisch bouwen.<br>
-Backend: Navigeer in project folder BookTrivia -> src -> main -> java -> com.example.booktrivia -> BookTriviaApplication.
 
-Environment variabelen: Klik rechtsboven op de applicatie -> edit configurations -> Modify options -> Environment variables. <br>
+<b>Backend:</b> Navigeer in project folder BookTrivia -> src -> main -> java -> com.example.booktrivia -> BookTriviaApplication.
+
+<b>Environment variabelen:</b> Klik rechtsboven op de applicatie -> edit configurations -> Modify options -> Environment variables. <br>
 Voeg hierin het volgende: TRIVIA_API_URL="https://opentdb.com/api.php?amount=10&category=10&difficulty=easy" 
 
 Run de applicatie om het backend op te starten. Deze is dan gestart op http://localhost:8081/.
@@ -15,7 +16,7 @@ Run de applicatie om het backend op te starten. Deze is dan gestart op http://lo
 Voor de unit testen navigeer in BookTrivia folder naar het test folder. Hierin is een subfolder genaamd Trivia.
 Door deze te openen kan je de unit testen runnen.
 
-Frontend: Navigeer vanuit de terminal naar de BookTriviaFrontend map d.m.v. "cd .\BookTriviaFrontend\" uit te voeren. <br> 
+<b>Frontend:</b> Navigeer vanuit de terminal naar de BookTriviaFrontend map d.m.v. "cd .\BookTriviaFrontend\" uit te voeren. <br> 
 Voer een 'npm i' uit en daarna een ng serve.<br>
 Het frontend is nu gestart op http://localhost:4200/.
     
