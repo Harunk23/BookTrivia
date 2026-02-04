@@ -1,3 +1,8 @@
+<b>Book Trivia Quiz Applicatie</b> <br>
+Het applicatie start een trivia quiz waar je 10 vragen kan beantwoorden met elk vier multiple choice antwoordmogelijkheden. <br>
+Bij elk correct beantwoorde vraag krijg je onderaan "correct!" te zien in het groen. Hierna wordt er bovenin je score met één opgeteld. <br>
+Bij een fout beantwoorde vraag krijgt je gekozen antwoord een donkerder kleur en krijg je te zien wat het goede antwoord zou moeten zijn.
+
 <b>Versies:</b> <br>
 Spring boot versie: 4.0.2 <br>
 Java: 21
@@ -9,7 +14,8 @@ Laad maven (pom.xml folder) en het project zal automatisch bouwen.<br>
 <b>Backend:</b> Navigeer in project folder BookTrivia -> src -> main -> java -> com.example.booktrivia -> BookTriviaApplication.
 
 <b>Environment variabelen:</b> Klik rechtsboven op de applicatie -> edit configurations -> Modify options -> Environment variables. <br>
-Voeg hierin het volgende: TRIVIA_API_URL="https://opentdb.com/api.php?amount=10&category=10&difficulty=easy" 
+Voeg hierin het volgende: TRIVIA_API_URL="https://opentdb.com/api.php?amount=10&category=10&difficulty=easy" <br>
+Klik daarna op apply en ok.
 
 Run de applicatie om het backend op te starten. Deze is dan gestart op http://localhost:8081/.
 
