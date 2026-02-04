@@ -1,8 +1,10 @@
 <b>Versies:</b> <br>
 Spring boot versie: 4.0.2 <br>
 Java: 21
+JDK: ms21
 
 <b>Bouw & Run de applicatie:</b> <br>
+Laad maven (pom.xml folder) en het project zal automatisch bouwen.
 Backend: Navigeer in project folder BookTrivia -> src -> main -> java -> com.example.booktrivia -> BookTriviaApplication.
 Run de applicatie om het backend op te starten. Deze is dan gestart op http://localhost:8081/.
 
