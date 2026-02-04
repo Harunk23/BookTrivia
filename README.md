@@ -11,6 +11,7 @@ Run de applicatie om het backend op te starten. Deze is dan gestart op http://lo
 Voor de unit testen navigeer in BookTrivia folder naar het test folder. Hierin is een subfolder genaamd Trivia.
 Door deze te openen kan je de unit testen runnen.
 
-Frontend: Navigeer vanuit de terminal naar de BookTriviaFrontend map. Voer een 'npm i' uit en daarna een ng serve.
+Frontend: Navigeer vanuit de terminal naar de BookTriviaFrontend map d.m.v. "cd .\BookTriviaFrontend\" uit te voeren. <br> 
+Voer een 'npm i' uit en daarna een ng serve.<br>
 Het frontend is nu gestart op http://localhost:4200/.
     
